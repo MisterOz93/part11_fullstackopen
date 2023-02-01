@@ -41,7 +41,7 @@ jobs:
         with:
           render-token: ${{ secrets.RENDER_AUTH_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          service-id: ${{ secrets.RENDER_SERVICE_ID }}
+          service-id: ${{ secrets.RENDER_SERVICE_ID }} #
           retries: 5
           wait: 10000
           sleep: 15000
