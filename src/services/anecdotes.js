@@ -1,6 +1,5 @@
 import axios from 'axios'
-const PORT = process.env.PORT || 3001
-const baseUrl = `http://localhost:${PORT}/anecdotes`
+const baseUrl = process.env.PORT ? 'https://fullstackopen-anecdotes.onrender.com/anecdotes' : 'http://localhost:3001/anecdotes'
 
 const getAll = async () => {
   const response = await axios.get(baseUrl)
