@@ -33,7 +33,7 @@ jobs:
       - name: deploy to render
         uses: fjogeleit/http-request-action@v1
         with:
-          url: ${{ secrets.RENDER_DEPLOY_HOOK }} #ph
+          url: ${{ secrets.RENDER_DEPLOY_HOOK }} #
           method: 'GET'
         if: ${{ github.event_name == 'push' && (!contains(join(github.event.commits.*.message), '#skip')) }}
       - name: check deploy
