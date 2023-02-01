@@ -28,7 +28,6 @@ jobs:
         uses: cypress-io/github-action@v5
         env: 
           MONGO_URI: ${{ secrets.MONGO_URI }}
-      
         with:
           start: npm run backend, npm start
       - name: deploy to render
