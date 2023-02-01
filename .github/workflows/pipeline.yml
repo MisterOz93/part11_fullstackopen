@@ -26,6 +26,8 @@ jobs:
         run: npm test
       - name: e2e tests
         uses: cypress-io/github-action@v5
+        with:
+          start: npm run backend, npm start
       - name: deploy to render
         uses: fjogeleit/http-request-action@v1
         with:
