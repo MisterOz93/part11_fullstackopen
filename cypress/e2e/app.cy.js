@@ -1,4 +1,4 @@
-import {anecdotes } from '../../data'
+import { anecdotes } from '../../data'
 
 beforeEach(function(){
   cy.visit('http://localhost:3000')
