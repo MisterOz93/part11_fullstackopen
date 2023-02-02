@@ -20,8 +20,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "backend-dev": "nodemon node app.js",
-    "backend": "node app.js",
+    "backend-dev": "NODE_ENV=development nodemon node app.js",
+    "backend": "NODE_ENV=production node app.js",
     "server": "json-server -p3001 --watch db.json",
     "build": "react-scripts build",
     "lint": "eslint .",

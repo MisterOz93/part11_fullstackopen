@@ -1,8 +1,7 @@
 import axios from 'axios'
-const baseUrl = process.env.PORT ? 'https://fullstackopen-anecdotes.onrender.com/anecdotes' : 'http://localhost:3001/anecdotes'
+const baseUrl = process.env.NODE_ENV === 'production' ? 'https://fullstackopen-anecdotes.onrender.com/anecdotes' : 'http://localhost:3001/anecdotes'
 
 const getAll = async () => {
-  console.log('process.env.PORT inside anecdotesService is', process.env.PORT)
   const response = await axios.get(baseUrl)
   return response.data
 }
